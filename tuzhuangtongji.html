@@ -1,0 +1,161 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/select.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.idTabs.min.js"></script>
+<script type="text/javascript" src="js/select-ui.min.js"></script>
+<script type="text/javascript" src="editor/kindeditor.js"></script>
+
+<script type="text/javascript">
+    KE.show({
+        id : 'content7',
+        cssPath : './index.css'
+    });
+  </script>
+  <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(e) {
+    $(".select1").uedSelect({
+		width : 345			  
+	});
+	$(".select2").uedSelect({
+		width : 167  
+	});
+	$(".select3").uedSelect({
+		width : 100
+	});
+});
+</script>
+</head>
+	<body>
+		<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">成员统计</a></li>
+    </ul>
+    </div>
+		<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 1200px;height:400px;"></div>
+    <div id="main2" style="width: 1200px;height:400px;"></div>
+    <div id="main3" style="width: 1200px;height:400px;"></div>
+    <div id="main4" style="width: 1200px;height:400px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+ 
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '学院统计'
+            },
+            tooltip: {},
+            legend: {
+                data:['成员人数']
+            },
+            xAxis: {
+                data: ["软件学院","大数据学院","理学院","研究生学院"]
+            },
+            yAxis: {},
+            series: [{
+                name: '成员人数',
+                type: 'bar',
+                data: [12, 20, 18, 20]
+            }]
+        };
+ 
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        
+    </script>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main2'));
+ 
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '年级统计'
+            },
+            tooltip: {},
+            legend: {
+                data:['成员人数']
+            },
+            xAxis: {
+                data: ["大一","大二","大三","大四"]
+            },
+            yAxis: {},
+            series: [{
+                name: '成员人数',
+                type: 'bar',
+                data: [ 36, 11, 16, 20]
+            }]
+        };
+ 
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        
+    </script>
+     <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main3'));
+ 
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '专业统计'
+            },
+            tooltip: {},
+            legend: {
+                data:['成员人数']
+            },
+            xAxis: {
+                data: ["应用物理","软件工程","大数据","材料成型及控制工程","电子信息工程"]
+            },
+            yAxis: {},
+            series: [{
+                name: '成员人数',
+                type: 'bar',
+                data: [5, 15, 20, 17, 20]
+            }]
+        };
+ 
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        
+    </script>
+     <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main4'));
+ 
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '状态统计'
+            },
+            tooltip: {},
+            legend: {
+                data:['成员人数']
+            },
+            xAxis: {
+                data: ["正常","退出","毕业"]
+            },
+            yAxis: {},
+            series: [{
+                name: '成员人数',
+                type: 'bar',
+                data: [30, 20, 25]
+            }]
+        };
+ 
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        
+    </script>
+	</body>
+</html>
